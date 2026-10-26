@@ -1,0 +1,129 @@
+:root {
+  --bg: #1e1f24;
+  --panel: #2a2b32;
+  --accent: #7c5cff;
+  --accent-hover: #916dff;
+  --text: #f1f1f4;
+  --muted: #9a9ba4;
+  --border: #3b3c45;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 340px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.app {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: 15px;
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.mode-btn {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 6px;
+  font-size: 11.5px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.mode-btn:hover {
+  border-color: var(--accent);
+}
+
+.mode-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.output-wrap {
+  position: relative;
+}
+
+#output {
+  background: #202127;
+}
+
+#copyBtn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 9px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+#copyBtn:hover {
+  background: var(--accent-hover);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#clearBtn {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 11.5px;
+  cursor: pointer;
+}
+
+#clearBtn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+#status {
+  font-size: 11px;
+  color: var(--accent);
+  min-height: 14px;
+}

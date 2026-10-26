@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Text Case Converter",
+  "short_name": "Text Case",
+  "version": "1.0.0",
+  "description": "Paste text, pick UPPERCASE / lowercase / Capitalize / Sentence case, get it converted instantly. Copy the result with one click.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Text Case Converter",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["clipboardWrite", "storage"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "text-case-converter@example.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Text Case Converter</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Text Case Converter</h1>
+    </header>
+
+    <textarea id="input" placeholder="Type or paste your text here..." rows="6"></textarea>
+
+    <div class="modes" id="modes">
+      <button class="mode-btn" data-mode="upper">UPPERCASE</button>
+      <button class="mode-btn" data-mode="lower">lowercase</button>
+      <button class="mode-btn" data-mode="capitalize">Capitalize Each Word</button>
+      <button class="mode-btn" data-mode="sentence">Sentence case</button>
+      <button class="mode-btn" data-mode="title">Title Case</button>
+      <button class="mode-btn" data-mode="toggle">tOGGLE cASE</button>
+    </div>
+
+    <div class="output-wrap">
+      <textarea id="output" placeholder="Result will appear here..." rows="6" readonly></textarea>
+      <button id="copyBtn" title="Copy to clipboard">Copy</button>
+    </div>
+
+    <div class="footer">
+      <button id="clearBtn">Clear</button>
+      <span id="status"></span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
